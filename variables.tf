@@ -15,7 +15,7 @@ EOT
     port          = number
     relay_id      = string
     web_app_id    = string
-    send_key_name = optional(string, "RootManageSharedAccessKey")
+    send_key_name = optional(string) # Default: "RootManageSharedAccessKey"
   }))
 }
 
