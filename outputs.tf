@@ -1,3 +1,7 @@
+output "web_app_hybrid_connections_id" {
+  description = "Map of id values across all web_app_hybrid_connections, keyed the same as var.web_app_hybrid_connections"
+  value       = { for k, v in azurerm_web_app_hybrid_connection.web_app_hybrid_connections : k => v.id }
+}
 output "web_app_hybrid_connections_hostname" {
   description = "Map of hostname values across all web_app_hybrid_connections, keyed the same as var.web_app_hybrid_connections"
   value       = { for k, v in azurerm_web_app_hybrid_connection.web_app_hybrid_connections : k => v.hostname }
